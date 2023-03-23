@@ -1,3 +1,3 @@
 # DITbase
 
-Custom curse for DIT MSK
+Custom course for DIT MSK
