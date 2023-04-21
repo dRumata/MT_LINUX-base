@@ -1,0 +1,36 @@
+curl -s -X POST https://api.telegram.org/bot6152158990:AAH0irhJZCd_31XunELUyySC794EoedvLh0/sendMessage -d chat_id=-1001966452444 -d text=" User $(whoami) logged into $(hostname) on $(date) from $(echo $SSH_CLIENT | awk '{ print $1}')" &>/dev/null 2>&1
+
+
+while true; 
+    do VAR=$(cat < /var/tmp/mypipe)
+    sudo bash -c 'curl -s -X POST https://api.telegram.org/bot6152158990:AAH0irhJZCd_31XunELUyySC794EoedvLh0/sendMessage -d chat_id=-1001966452444 -d text=$VAR'; 
+
+while true; 
+    do sudo bash -c "export VAR=$(cat < /var/tmp/mypipe)";
+    sudo bash -c 'echo $VAR'; 
+done
+
+
+curl -s -X POST https://api.telegram.org/bot6152158990:AAH0irhJZCd_31XunELUyySC794EoedvLh0/sendMessage -d chat_id=-1001966452444 -d text=" Unit Telegram-bot on $(hostname) is started on $(date)| awk '{ print $1}')" &>/dev/null 2>&1
+
+
+
+#!/bin/bash
+curl -s -X POST https://api.telegram.org/$BotApi/sendMessage -d chat_id=$chat_id -d text=" Unit TG-bot on $(hostname) is started on $(date) Host status is: $(hostnamectl)" &>/dev/null 2>&1
+
+
+[Unit]
+Description=send msg to tg
+
+[Service]
+#environment: telegram bot api and ID of channel
+Environment=BotApi=bot6152158990:AAH0irhJZCd_31XunELUyySC794EoedvLh0
+Environment=chat_id=-1001966452444
+#fail
+ExecStop=/bin/kill -9 $MAINPID
+#StandardOutput=null
+#success
+ExecStart=/bin/bash /home/student/bin/sendmsg.sh
+
+[Install]
+WantedBy=multi-user.target
