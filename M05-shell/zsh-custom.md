@@ -59,15 +59,22 @@ source ~/.zshrc
 With that, you're finished and should have a much better terminal experience!
 
 ## Install neovim
+```
 dnf install neovim
+```
 
-## Install NerdFont
+## Install neovim plugins
+```
+git clone https://github.com/nvim-lua/kickstart.nvim.git ~/.config/nvim && nvim
+```
+
+## How to Install NerdFont
 https://github.com/ryanoasis/nerd-fonts
 ansible in neovim https://github.com/pearofducks/ansible-vim
 Install nodejs (Nvchad dependency)
 Install ripgrep (Nvchad dependency)
 
-## NvChad
+## How to install NvChad
 [NvChad install doc](https://nvchad.com/docs/quickstart/install)
 ```
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
