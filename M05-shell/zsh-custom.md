@@ -2,11 +2,17 @@ https://www.josean.com/posts/terminal-setup
 
 
 
-## Install Git
+## 1 Install Git
 If you don't have it installed, install git as well:
 ```
 dnf install git
 ```
+## 2 Install gcc-c++
+If you don't have it installed, install git as well:
+```
+dnf install gcc-с++
+```
+
 ## Install Oh My Zsh
 Run this to install Oh My Zsh:
 ```
