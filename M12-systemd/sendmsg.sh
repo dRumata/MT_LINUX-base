@@ -20,6 +20,6 @@ if [ "$#" -ne 1 ]; then
     exit 0
 fi
 
-#curl https://api.telegram.org/bot6152158990:AAH0irhJZCd_31XunELUyySC794EoedvLh0/sendMessage?chat_id=-1001966452444&text=$(hostnamectl)
+#curl https://api.telegram.org/bot<$BotApi>/sendMessage?chat_id=<$chat_id>&text=$(hostnamectl)
 
 curl -s --data "text=$1" --data "chat_id=$chat_id" 'https://api.telegram.org/bot'$BotApi'/sendMessage' > /dev/null
