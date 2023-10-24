@@ -3,7 +3,7 @@
 #Раскомментируйте 2 строки и заполните значения если не используете Enviroment в *.service
 #chat_id=<ask trainer>
 #BotApi=<ask trainer>
-
+curl -s --data "text=$(hostnamectl)" --data "chat_id=$chat_id" 'https://api.telegram.org/bot'$BotApi'/sendMessage' > /dev/null
 # this 3 checks (if) are not necessary but should be convenient
 if [ "$1" == "-h" ]; then
   echo "Usage: `basename $0` \"text message\""
