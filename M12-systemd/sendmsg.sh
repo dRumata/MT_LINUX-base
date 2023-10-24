@@ -1,7 +1,8 @@
 #/bin/bash
 
-chat_id=<ask trainer>
-BotApi=<ask trainer>
+#Раскомментируйте 2 строки и заполните значения если не используете Enviroment в *.service
+#chat_id=<ask trainer>
+#BotApi=<ask trainer>
 
 # this 3 checks (if) are not necessary but should be convenient
 if [ "$1" == "-h" ]; then
